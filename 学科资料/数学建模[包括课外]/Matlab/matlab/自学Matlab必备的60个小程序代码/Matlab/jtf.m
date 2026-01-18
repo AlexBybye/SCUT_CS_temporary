@@ -1,0 +1,24 @@
+a(1)=1;
+t=2;
+h(1)=0.02;
+y(1)=f2(a);
+e=10^(-4);
+while(k>0)
+   a(k+1)=a(k)+h(k);
+   y(k+1)=f2(a(k+1));
+   if(y(k+1)<y(k))
+      h(k+1)=t*h(k);
+      af=a(k);
+      a(k)=a(k+1);
+      k=k+1;
+  elseif
+      if(k==1)
+          h(k)=-h(k);
+          a(k)=a(k+1);
+      end
+   else
+      break;
+   end
+end
+   a=min(af,a(k+1));
+   b=max(af,a(k+1));

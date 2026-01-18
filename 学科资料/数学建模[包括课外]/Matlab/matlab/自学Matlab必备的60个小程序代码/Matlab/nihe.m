@@ -1,0 +1,20 @@
+x=1:8;
+y=[15.3,20.5,27.4,36.6,49.1,65.6,87.8,117.6];
+y1=log(y);
+n=1;%表示用一次函数拟和
+m=length(x);
+A=zeros(m,n+1);
+for i=1:2
+    A(:,i)=x.^(i-1)';
+end
+B=A'*A;
+C=A'*y1';
+re=B\C;
+a=exp(re(1));
+b=re(2);
+Y=a*exp(b*x);
+err=norm(Y-y,2)
+plot(x,y,'r+',x,Y,'g');
+xlabel('x');
+ylabel('y');
+legend('原始数据','拟和曲线');

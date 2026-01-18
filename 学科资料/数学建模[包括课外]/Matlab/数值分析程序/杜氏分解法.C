@@ -1,0 +1,49 @@
+#include<stdio.h>
+#include<math.h>
+
+main()
+{int n,i,j,k,t,sum;
+ float a[10][10],b[10],x[10],y[10];
+ printf("the top exp is ");
+ scanf("%d",&n);
+ for(i=0;i<n;i++)
+  for(j=0;j<n;j++)
+   scanf("%d",&a[i][j]);
+ for(i=0;i<n;i++)
+  scanf("%d",&b[i]);
+ for(i=1;i<n;i++)
+  a[i][1]=a[i][1]/a[1][1];
+   for(k=1;k<n;k++)
+    {for(j=k;j<n;j++)
+      {sum=0;
+       for(t=0;t<k;t++)
+	sum+=a[k][t]*a[t][j];
+       a[k][j]=a[k][j]-sum;
+      }
+     if(k!=n-1)
+      {for(i=k+1;i<n;i++)
+	{sum=0;
+	 for(t=0;t<k;t++)
+	  sum+=a[i][t]*a[t][k];
+	 a[i][k]=(a[i][k]-sum)/a[k][k];
+	}
+      }
+    }
+ y[0]=b[0];
+ for(i=1;i<n;i++)
+  {sum=0;
+   for(k=0;k<i;k++)
+    sum+=a[i][k]*y[k];
+   y[i]=b[i]-sum;
+  }
+ x[n-1]=y[n-1]/a[n-1][n-1];
+ for(i=n-2;i>=0;i--)
+  {sum=0;
+   for(k=i+1;k<n;k++)
+    sum+=a[i][k]*x[k];
+   x[i]=(y[i]-sum)/a[i][i];
+  }
+ for(i=0;i<n;i++)
+  printf("%f\n",x[i]);
+}
+
