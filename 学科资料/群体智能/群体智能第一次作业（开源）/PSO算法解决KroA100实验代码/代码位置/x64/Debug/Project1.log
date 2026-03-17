@@ -1,7 +1,0 @@
-﻿  群体智能.cpp
-C:\Users\24441\Desktop\群体智能 于博宇\PSO算法解决KroA100实验代码\Project1\群体智能.cpp(87,66): warning C4267: “=”: 从“size_t”转换到“_Ty”，可能丢失数据
-C:\Users\24441\Desktop\群体智能 于博宇\PSO算法解决KroA100实验代码\Project1\群体智能.cpp(87,66): warning C4267:         with
-C:\Users\24441\Desktop\群体智能 于博宇\PSO算法解决KroA100实验代码\Project1\群体智能.cpp(87,66): warning C4267:         [
-C:\Users\24441\Desktop\群体智能 于博宇\PSO算法解决KroA100实验代码\Project1\群体智能.cpp(87,66): warning C4267:             _Ty=int
-C:\Users\24441\Desktop\群体智能 于博宇\PSO算法解决KroA100实验代码\Project1\群体智能.cpp(87,66): warning C4267:         ]
-  Project1.vcxproj -> C:\Users\24441\Desktop\群体智能 于博宇\PSO算法解决KroA100实验代码\x64\Debug\Project1.exe
