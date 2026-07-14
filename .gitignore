@@ -1,6 +1,7 @@
 # Visual Studio 缓存与临时文件 (重点)
 .vs/
 .vscode/
+.obsidian/
 *.ipch
 *.sdf
 *.suo
