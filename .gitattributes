@@ -19,3 +19,8 @@
 *.txt linguist-documentation
 # Markdown（README 等文档）
 *.md linguist-documentation
+# Jupyter Notebook（课堂笔记）
+*.ipynb linguist-documentation
+# 配置文件
+*.json linguist-documentation
+*.sh linguist-documentation
